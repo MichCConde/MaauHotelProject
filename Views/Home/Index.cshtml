@@ -1,0 +1,80 @@
+﻿@{
+Layout = "~/Views/Shared/_Layout.cshtml"; // Optional: Specify if using a shared layout
+ViewData["Title"] = "Hotel Homepage";
+}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewData["Title"]</title>
+        <link rel="stylesheet" href="~/css/index.css" />
+    </head>
+
+    <body>
+    <header>
+        <img src="~/images/logo-placeholder.png" alt="Hotel Logo" class="header-logo">
+        <h1>Welcome to Our Luxury Hotel</h1>
+        <p>Experience unmatched comfort and style.</p>
+        <a href="~/Booking" class="book-now-btn">Book Now</a>
+    </header>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="section">
+        <h2>Our Rooms</h2>
+        <div class="room-cards">
+            <div class="room-card">
+                <img src="~/resources/standard-room.jpg" alt="Standard Room">
+                <h3>Standard Room</h3>
+                <p>Comfortable and affordable with all basic amenities.</p>
+            </div>
+            <div class="room-card">
+                <img src="~/resources/deluxe-room.jpg" alt="Deluxe Room">
+                <h3>Deluxe Room</h3>
+                <p>Spacious room with premium features and a great view.</p>
+            </div>
+            <div class="room-card">
+                <img src="~/resources/suite-room.jpg" alt="Suite">
+                <h3>Suite</h3>
+                <p>Our finest suite with luxury facilities and services.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="section">
+        <h2>Amenities</h2>
+        <div class="amenity-list">
+            <div class="amenity-item">
+                <img src="~/resources/pool.jpg" alt="Swimming Pool">
+                <h3>Swimming Pool</h3>
+                <p>Relax and unwind in our beautiful outdoor pool.</p>
+            </div>
+            <div class="amenity-item">
+                <img src="~/resources/gym.jpg" alt="Gym">
+                <h3>Gym</h3>
+                <p>Fully equipped gym for all your fitness needs.</p>
+            </div>
+            <div class="amenity-item">
+                <img src="~/resources/spa.jpg" alt="Spa">
+                <h3>Spa</h3>
+                <p>Indulge in a rejuvenating spa experience.</p>
+            </div>
+            <div class="amenity-item">
+                <img src="~/resources/restaurant.jpg" alt="Restaurant">
+                <h3>Restaurant</h3>
+                <p>Enjoy fine dining with a variety of cuisines.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; @DateTime.Now.Year Maau Hotel. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="~/js/site.js"></script>
+    </body>
+</html>
+

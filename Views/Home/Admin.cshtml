@@ -1,0 +1,57 @@
+﻿@page
+@using MaauHotelProject.Classes
+@model AdminModel
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Admin</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="~/css/admin.css" />
+    </head>
+
+    <body>
+        <!-- Main sidenav with close button -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div>
+                <a href="#">Logo</a>
+                <a>@Model.UserName</a> <!-- Dynamic user name from model -->
+            </div>
+            <!-- Detailed view links -->
+            <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index" id="dashboard-detail">Dashboard</a>
+            <a asp-area="Admin" asp-controller="Bookings" asp-action="Index" id="bookings-detail">Bookings</a>
+            <a asp-area="Admin" asp-controller="Schedule" asp-action="Index" id="schedule-detail">Schedule</a>
+            <a asp-area="Admin" asp-controller="Payments" asp-action="Index" id="payments-detail">Payments</a>
+            <a asp-area="Admin" asp-controller="Rates" asp-action="Index" id="rates-detail">Rates</a>
+            <a asp-area="Admin" asp-controller="More" asp-action="Index" id="more-detail">More</a>
+        </div>
+
+        <!-- Default collapsed sidebar with shorthand links -->
+        <div id="defaultSidebar" class="sidenav-default">
+            <span style="font-size:30px;cursor:pointer;padding:20px;" onclick="openNav()">&#9776;</span>
+            <div>
+                <a href="#">L</a>
+                <a>U</a>
+            </div>
+            <!-- Collapsed view links -->
+            <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index" id="dashboard-default">D</a>
+            <a asp-area="Admin" asp-controller="Bookings" asp-action="Index" id="bookings-default">B</a>
+            <a asp-area="Admin" asp-controller="Schedule" asp-action="Index" id="schedule-default">S</a>
+            <a asp-area="Admin" asp-controller="Payments" asp-action="Index" id="payments-default">P</a>
+            <a asp-area="Admin" asp-controller="Rates" asp-action="Index" id="rates-default">R</a>
+            <a asp-area="Admin" asp-controller="More" asp-action="Index" id="more-default">M</a>
+        </div>
+
+        <!-- Main content area -->
+        <div id="main">
+            <div id="contentBox" class="content-box">
+                <h2>@Model.PageTitle</h2> <!-- Dynamic page title -->
+                <p>@Model.PageDescription</p> <!-- Dynamic page description -->
+            </div>
+        </div>
+
+        <!-- Link to JavaScript file -->
+        <script src="~/js/adminscript.js"></script>
+    </body>
+</html>
